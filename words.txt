@@ -1,0 +1,12 @@
+bunx
+draculens
+electricsql
+fuzzystrmatch
+opss
+ossp
+pgvector
+repomix
+sslmode
+tmpfs
+tsbuildinfo
+vectorizing

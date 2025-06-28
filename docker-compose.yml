@@ -1,0 +1,18 @@
+name: effect-drizzle
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: database
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - 54321:5432
+    tmpfs:
+      - /var/lib/postgresql/data
+      - /tmp
+    command:
+      - -c
+      - listen_addresses=*
+      - -c
+      - wal_level=logical

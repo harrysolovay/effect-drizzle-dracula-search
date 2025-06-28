@@ -1,0 +1,4 @@
+.env
+migrations_dev
+node_modules
+dist

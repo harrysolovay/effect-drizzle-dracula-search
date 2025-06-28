@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc -b",
+    "watch": "tsc -b -w",
+    "dc:up": "docker compose up",
+    "dc:rm": "docker compose down -v",
+    "dc:re": "bun dc:rm && bun dc:up",
+    "db:init": "rm -rf migrations && bun ensure_pg_ext && drizzle-kit generate && drizzle-kit migrate",
+    "drizzle": "drizzle-kit"
+  },
+  "devDependencies": {
+    "@effect/language-service": "^0.20.1",
+    "@types/bun": "^1.2.13",
+    "@types/node": "^22.15.19",
+    "dprint": "^0.50.0",
+    "drizzle-kit": "^0.31.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@effect/ai": "^0.21.3",
+    "@effect/ai-openai": "^0.24.3",
+    "@effect/cli": "^0.66.1",
+    "@effect/platform": "^0.87.1",
+    "@effect/platform-bun": "^0.72.3",
+    "@effect/sql-drizzle": "^0.39.1",
+    "@effect/sql-pg": "^0.41.1",
+    "drizzle-orm": "^0.44.2",
+    "effect": "^3.16.10"
+  }
+}
