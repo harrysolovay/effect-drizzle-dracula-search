@@ -7,8 +7,7 @@
     "dc:up": "docker compose up",
     "dc:rm": "docker compose down -v",
     "dc:re": "bun dc:rm && bun dc:up",
-    "db:init": "rm -rf migrations && bun ensure_pg_ext && drizzle-kit generate && drizzle-kit migrate",
-    "drizzle": "drizzle-kit"
+    "db:init": "rm -rf migrations && bun ensure_pg_ext && drizzle-kit generate && drizzle-kit migrate"
   },
   "devDependencies": {
     "@effect/language-service": "^0.20.1",

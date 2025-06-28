@@ -23,8 +23,7 @@ await Effect.gen(function*() {
     yield* vectorize(chunks[i]!)
   }
 }).pipe(
-  Effect.provide(Live.pipe(
-    Layer.provideMerge(BunFileSystem.layer),
-  )),
+  Effect.provide(Live),
+  Effect.provide(BunFileSystem.layer),
   Effect.runPromise,
 )

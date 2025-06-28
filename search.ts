@@ -28,8 +28,7 @@ await Effect.gen(function*() {
     yield* Console.log(body + "\n\n---\n\n")
   }
 }).pipe(
-  Effect.provide(Live.pipe(
-    Layer.provideMerge(BunTerminal.layer),
-  )),
+  Effect.provide(Live),
+  Effect.provide(BunTerminal.layer),
   Effect.runPromise,
 )
